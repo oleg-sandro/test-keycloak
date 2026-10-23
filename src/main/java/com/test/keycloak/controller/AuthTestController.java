@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/test")
-public class TestController {
+@RequestMapping("/api/v1/test/auth")
+public class AuthTestController {
 
     @GetMapping("/public")
     public String testPermission() {
@@ -18,7 +18,7 @@ public class TestController {
         return "Private endpoint: OK";
     }
 
-    @GetMapping("/other")
+    @GetMapping("/restricted")
     public String testDenial() {
         return "Other endpoint: OK";
     }
